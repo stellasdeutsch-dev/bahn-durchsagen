@@ -481,6 +481,12 @@ main,header,footer,.dock{position:relative;z-index:1}
 .shot{flex:0 0 46%;max-width:220px;scroll-snap-align:start;margin:0}
 .shot img{width:100%;border-radius:20px;box-shadow:var(--sh);aspect-ratio:9/16;object-fit:cover;object-position:top}
 .shot figcaption{font-size:12px;color:var(--mute);margin-top:8px;text-align:center}
+.nshots{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px var(--gut) 26px;margin:24px calc(var(--gut)*-1) 0;scrollbar-width:none}
+.nshots::-webkit-scrollbar{display:none}
+.nsh{flex:0 0 88%;max-width:600px;scroll-snap-align:center;margin:0}
+.nsh img{display:block;width:100%;height:auto;filter:drop-shadow(0 18px 24px rgba(30,40,70,.22))}
+.nsh figcaption{font-size:13.5px;color:var(--mute);margin:6px 8px 0}
+.nsh figcaption b{color:var(--ink)}
 .trust{display:grid;gap:18px;margin-top:50px}
 .trust .card{display:grid;gap:16px;padding:22px 18px}
 .trust h3{margin:0;font:500 clamp(22px,6vw,32px)/1.2 var(--f);color:var(--ink2)}
@@ -1061,6 +1067,20 @@ html.gs .rv{transition:none}
       <div class="tr rv"><span class="badge"><svg><use href="#cog"/></svg>03</span><div class="ph"><img src="media/p6-tracker.webp" alt="Трекер прогресса в Notion" loading="lazy"></div><h4>Видно прогресс</h4><p>Отмечаешь пройденные темы. Пропуски тоже видно</p></div>
     </div>
 
+    <div class="center" style="margin-top:64px">
+      <p class="eyebrow"><svg class="ic"><use href="#i-sparkles"/></svg>Платформа изнутри</p>
+      <h2 class="h2">Вот как это выглядит <span class="bl">в Notion</span></h2>
+      <p class="lede">Настоящие страницы платформы, без монтажа. Листай вбок.</p>
+    </div>
+    <div class="nshots" aria-label="Скриншоты платформы в Notion">
+      <figure class="nsh rv"><img src="media/n-a0-city.webp" alt="Раздел «Повседневное общение и город»: спросить дорогу, общественный транспорт, покупка билета, проверка билетов" loading="lazy"><figcaption><b>Город и транспорт.</b> Спросить дорогу, автобус, покупка билета, контролёр. Тема этого гайда, только целиком.</figcaption></figure>
+      <figure class="nsh rv"><img src="media/n-a0-intro-audio.webp" alt="Страница «Знакомство на немецком»: аудио и таблица с переводом и транскрипцией" loading="lazy"><figcaption><b>Каждая тема с аудио.</b> Слушаешь диалог. Рядом немецкий, перевод и транскрипция кириллицей.</figcaption></figure>
+      <figure class="nsh rv"><img src="media/n-a0-newlex.webp" alt="Раздел «Новая лексика»: у терапевта, в больнице, в аптеке, звонок в скорую" loading="lazy"><figcaption><b>Ситуации из жизни.</b> Терапевт, аптека, звонок в скорую. Каждая ситуация отдельной страницей.</figcaption></figure>
+      <figure class="nsh rv"><img src="media/n-a0-work.webp" alt="Раздел «Работа»: поиск работы, звонок работодателю, резюме, собеседование" loading="lazy"><figcaption><b>Работа.</b> Поиск работы, резюме, собеседование, больничный, конфликт с коллегой.</figcaption></figure>
+      <figure class="nsh rv"><img src="media/n-a0-srs.webp" alt="Система интервальных повторений: карточки слов по уровням A1–C1" loading="lazy"><figcaption><b>Повторение слов.</b> Карточки по уровням. Слово возвращается, когда его пора повторить.</figcaption></figure>
+      <figure class="nsh rv"><img src="media/n-a0-habits.webp" alt="Трекеры привычек: чтение, слушание, разговорная практика, письмо" loading="lazy"><figcaption><b>Трекеры привычек.</b> Чтение, слушание, разговор, письмо. Отмечаешь каждый день, пропуски тоже видно.</figcaption></figure>
+    </div>
+
     <div class="showcase">
       <div>
         <div class="phone"><div class="scr"><span class="notch" aria-hidden="true"></span><video class="vid" muted loop playsinline preload="none" data-poster="media/guide-scroll.jpg"><source src="media/guide-scroll.mp4" type="video/mp4"></video></div></div>
@@ -1072,13 +1092,11 @@ html.gs .rv{transition:none}
       </div>
     </div>
 
-    <div class="shots" aria-label="Скриншоты платформы и гайдов">
+    <div class="shots" aria-label="Скриншоты гайдов">
       <figure class="shot"><img src="media/g-61.webp" alt="Гайд: у врача в Германии" loading="lazy"><figcaption>Krankenhaus · у врача</figcaption></figure>
       <figure class="shot"><img src="media/g-55.webp" alt="Гайд: Das Handy" loading="lazy"><figcaption>Das Handy</figcaption></figure>
       <figure class="shot"><img src="media/g-25.webp" alt="Гайд: Akkusativ и Dativ" loading="lazy"><figcaption>Akkusativ и Dativ</figcaption></figure>
       <figure class="shot"><img src="media/g-37.webp" alt="Гайд: Perfekt" loading="lazy"><figcaption>Perfekt</figcaption></figure>
-      <figure class="shot"><img src="media/p8-situations.webp" alt="Лексика по ситуациям в Notion" loading="lazy" style="object-fit:contain;background:#fff"><figcaption>Ситуации из жизни</figcaption></figure>
-      <figure class="shot"><img src="media/p7-work.webp" alt="Раздел про работу и документы" loading="lazy" style="object-fit:contain;background:#fff"><figcaption>Работа и документы</figcaption></figure>
     </div>
 
     <div class="trust">
